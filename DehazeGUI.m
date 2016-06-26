@@ -152,6 +152,7 @@ if ~isempty(imgInput)
     %b_Uns_Mean = mean(mean(b(ROI_Uns)));
     
     % we divide hue interval [0, h0] into 256 bins
+    % most of the code here can be vectorized
     H_bins = zeros(4, 256);
     
      [row, col] = size(H);
